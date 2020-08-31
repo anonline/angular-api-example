@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>Új bejegyzés</h2>
+<form>
+<mat-dialog-content [formGroup]="form" class="form">
+
+    <mat-form-field class="fw" appearance="outline">
+      <mat-label>Bejegyzés címe</mat-label>
+        <input matInput formControlName="title">
+    </mat-form-field>
+    <mat-form-field class="fw" appearance="outline">
+      <mat-label>User azonosító</mat-label>
+      <input matInput type="number" formControlName="userId">
+  </mat-form-field>
+  <mat-form-field class="fw" appearance="outline">
+    <mat-label>Bejegyzés szövege</mat-label>
+    <textarea matInput formControlName="body"></textarea>
+  </mat-form-field>
+</mat-dialog-content>
+</form>
+
+<mat-dialog-actions class="formfooter">
+    <button class="mat-raised-button"(click)="onNoClick()">Bezárás</button>
+    <button class="mat-raised-button mat-primary"(click)="save()">Mentés</button>
+</mat-dialog-actions>
